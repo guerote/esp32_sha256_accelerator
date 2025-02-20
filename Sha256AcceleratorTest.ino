@@ -93,7 +93,7 @@ void hashTask(void *taskId) {
       // half of hashing cycle.
       shaData[0] = hb32[16];
       shaData[1] = hb32[17];
-      shaData[2] = BYTESWAP32(hb32[18]); // Timestamp
+      shaData[2] = BYTESWAP32(hb32[18]); // Difficulty
       shaData[3] = BYTESWAP32(hb32[19]); // Nonce
       shaData[4] = 0x80000000;           // Trailing bit
       shaData[5] = 0;
