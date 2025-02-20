@@ -45,7 +45,8 @@ volatile bool keepHashing = true;
 // This task will be pinned to CORE 1 (See compilation note)
 void hashTask(void *taskId) {
 
-  // The ESP32-WROOM32 uses the same registers for text and hashing
+  // The ESP32-WROOM32 uses the same registers for input data 
+  // and hash output.
   volatile uint32_t *shaData = (uint32_t*) SHA_TEXT_BASE;
   volatile uint32_t *hash = (uint32_t*) SHA_TEXT_BASE;
 
